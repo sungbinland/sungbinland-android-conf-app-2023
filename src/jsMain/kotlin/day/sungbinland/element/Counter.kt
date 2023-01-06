@@ -24,6 +24,7 @@ import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.css.vh
 import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Div
+import org.jetbrains.compose.web.dom.H1
 import org.jetbrains.compose.web.dom.Span
 import org.jetbrains.compose.web.dom.Text
 
@@ -44,13 +45,19 @@ fun Counter(
         }
     }) {
         Button(attrs = { onClick { onDecrement() } }) {
-            Text("-")
+            H1 {
+                Text("-")
+            }
         }
         Span({ style { padding(15.px) } }) {
-            Text("$count")
+            H1 {
+                Text("$count")
+            }
         }
         Button(attrs = { onClick { onIncrement() } }) {
-            Text("+")
+            H1 {
+                Text("+")
+            }
         }
     }
 }
