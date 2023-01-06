@@ -10,7 +10,7 @@
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 
 plugins {
-    kotlin("multiplatform") version 1.8.0
+    kotlin("multiplatform") version libs.versions.kotlin.core
     alias(libs.plugins.compose.core)
     alias(libs.plugins.code.ktlint)
     alias(libs.plugins.code.detekt)
