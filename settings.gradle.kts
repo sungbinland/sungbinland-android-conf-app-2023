@@ -1,15 +1,20 @@
+/*
+ * Designed and developed by Ji Sungbin, 2023
+ *
+ * Licensed under the MIT.
+ * Please see full license: https://github.com/sungbinland/conference-web-template
+ */
+
 rootProject.name = "SungbinlandConfWeb"
 
 pluginManagement {
     repositories {
-        google()
         gradlePluginPortal()
-        mavenCentral()
-        maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
+}
 
-    plugins {
-        kotlin("multiplatform").version(extra["kotlin.version"] as String)
-        id("org.jetbrains.compose").version(extra["compose.version"] as String)
+buildCache {
+    local {
+        removeUnusedEntriesAfterDays = 7
     }
 }
