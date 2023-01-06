@@ -7,8 +7,11 @@
 
 @file:Suppress("DSL_SCOPE_VIOLATION")
 
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
+
 plugins {
     kotlin("multiplatform") version libs.versions.kotlin.core
+    alias(libs.plugins.compose.core)
     alias(libs.plugins.code.ktlint)
     alias(libs.plugins.code.detekt)
 }
@@ -45,15 +48,24 @@ kotlin {
     sourceSets {
         val jsMain by getting {
             dependencies {
-                implementation(libs.compose.runtime)
-                implementation(libs.compose.web.core)
+                implementation(compose.web.core)
+                implementation(compose.runtime)
             }
         }
         val jsTest by getting {
             dependencies {
                 implementation(libs.test.kotlin)
-                implementation(libs.test.compose.web.utils)
+                implementation(compose.web.testUtils)
             }
         }
+    }
+}
+
+// a temporary workaround for a bug in jsRun invocation
+// see https://youtrack.jetbrains.com/issue/KT-48273
+afterEvaluate {
+    rootProject.extensions.configure<NodeJsRootExtension> {
+        versions.webpackDevServer.version = "4.0.0"
+        versions.webpackCli.version = "4.10.0"
     }
 }

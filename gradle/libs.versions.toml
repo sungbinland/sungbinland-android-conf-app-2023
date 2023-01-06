@@ -7,7 +7,7 @@ code-ktlint-source = "0.45.2"
 code-detekt = "1.21.0"
 
 # kotlin
-kotlin-core = "1.7.21"
+kotlin-core = "1.7.20"
 kotlin-kover = "0.6.1"
 kotlin-collections-immutable = "0.3.5"
 
@@ -20,12 +20,9 @@ code-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "code-detekt" 
 
 kotlin-kover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kotlin-kover" }
 
+compose-core = { id = "org.jetbrains.compose", version.ref = "compose-core" }
+
 [libraries]
 kotlin-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlin-collections-immutable" }
 
-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose-core" }
-compose-web-core = { module = "org.jetbrains.compose.web:web-core", version.ref = "compose-core" }
-compose-web-svg = { module = "org.jetbrains.compose.web:web-svg", version.ref = "compose-core" }
-
 test-kotlin = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin-core" }
-test-compose-web-utils = { module = "org.jetbrains.compose.web:test-utils", version.ref = "compose-core" }

@@ -22,13 +22,13 @@ fun Counter(
     onDecrement: () -> Unit,
 ) {
     Div({ style { padding(25.px) } }) {
-        Button(attrs = { onClick { onIncrement() } }) {
+        Button(attrs = { onClick { onDecrement() } }) {
             Text("-")
         }
         Span({ style { padding(15.px) } }) {
             Text("$count")
         }
-        Button(attrs = { onClick { onDecrement() } }) {
+        Button(attrs = { onClick { onIncrement() } }) {
             Text("+")
         }
     }
