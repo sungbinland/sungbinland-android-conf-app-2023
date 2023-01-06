@@ -7,7 +7,7 @@ code-ktlint-source = "0.45.2"
 code-detekt = "1.21.0"
 
 # kotlin
-kotlin-core = "1.7.20"
+kotlin-core = "1.8.0"
 kotlin-collections-immutable = "0.3.5"
 
 # compose
