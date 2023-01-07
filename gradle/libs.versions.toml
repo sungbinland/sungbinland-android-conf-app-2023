@@ -4,10 +4,10 @@ code-ktlint-core = "11.0.0"
 # https://github.com/JLLeitschuh/ktlint-gradle/issues/589
 # klint 최신 버전과 사용 불가
 code-ktlint-source = "0.45.2"
-code-detekt = "1.21.0"
+code-detekt = "1.22.0"
 
 # kotlin
-kotlin-core = "1.7.20"
+kotlin-core = "1.8.0"
 kotlin-collections-immutable = "0.3.5"
 
 # compose
